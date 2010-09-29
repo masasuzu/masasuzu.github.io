@@ -1,0 +1,19 @@
+@charset "UTF-8"
+
+.header {
+  color: black;
+}
+
+h1.title {
+  text-decoration: underline;
+}
+
+.main {
+  color: silver;
+}
+
+.footer {
+  color: black;
+
+}
+
