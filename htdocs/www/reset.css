@@ -1,0 +1,38 @@
+/* グローバルセレクタでmargin/paddingなどを初期化する */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #000000;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1.0;
+  vertical-align: baseline;
+}
+
+/* 要素を指定してmargin/paddingを初期化する */
+html, body, div, h1, h2, h3, h4, h5, h6, p, pre, blockquote, address, 
+  ul, ol, dl, dt, dd, table, th, td, form, fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+/* ブラウザのスクロールバー表示の違いを解決する */ 
+html {
+  overflow: scroll;
+  overflow: -moz-scrollabars-vertical;
+  overflow-x: scroll;
+}
+
+/* ** 表(テーブル)のボーダー表示方法の違いを解決する  */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*イメージのリンクボーダーの非表示化 */
+img {
+   border: 0;
+}
