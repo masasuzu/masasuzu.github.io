@@ -3,11 +3,13 @@
 ## Basic
 
 id
-:masasuzu
+: masasuzu
+
 name
-:SUZUKI Masashi
+: SUZUKI Masashi
+
 job
-:Software Engineer
+: Software Engineer
 
 ## Links
 
