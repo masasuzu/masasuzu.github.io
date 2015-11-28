@@ -7,45 +7,23 @@
   </head>
 
   <body>
-    <header>
-      <h1>masasuzu.net</h1>
-    </header>
+    <script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/js/marked.js"></script>
+    <script>
+$(document).ready(function(){
+  var target = $("#markdown_content");
 
-    <section>
-      <h2>Basic</h2>
-      <dl>
-        <dt>id</dt><dd>masasuzu</dd>
-        <dt>name</dt><dd>SUZUKI Masashi</dd>
-        <dt>job</dt><dd>Software Engineer</dd>
-      </dl>
-    </section>
+  $.ajax({
+    url: target[0].attributes["src"].value,
+  }).success(function(data){
+    target.append(marked(data));
+  }).error(function(data){
+    target.append("This content failed to load.");
+  });
+});
+    </script>
 
-    <section>
-      <h2>Links</h2>
-      <ul>
-        <li><a href="https://about.me/masasuzu">about.me</a></li>
-        <li><a href="https://github.com/masasuzu/">Github</a></li>
-        <li><a href="https://metacpan.org/author/MASASUZU">CPAN</a></li>
-        <li><a href="https://speakerdeck.com/masasuzu">Speaker Deck</a></li>
-        <li><a href="https://github.com/masasuzu/resume">Resume(Japanese)</a></li>
-        <li><a href="https://twitter.com/masasuz">Twitter</a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=100000081625214">Facebook</a></li>
-        <li><a href="http://masasuzu.hatenablog.jp/">blog(main)</a></li>
-        <li><a href="http://masasuzu.hatenadiary.jp/">blog(sub)</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>Perl</li>
-        <li>MySQL</li>
-        <li>Zsh</li>
-        <li>Bash</li>
-        <li>Debian</li>
-        <li>Ubuntu</li>
-      </ul>
-    </section>
+    <div id="markdown_content" src="/src/index.md"></div>
 
     <footer>
       (c) 2010-  masasuzu
